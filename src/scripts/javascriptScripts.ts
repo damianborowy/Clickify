@@ -4,6 +4,4 @@ function aaa(a, b, c) {
   return a + b + c + foo;
 }`;
 
-export default [...new Array(5)].map((_el, index) =>
-    codeString.repeat(index + 1)
-);
+export default [...new Array(100)].map((_el, index) => index.toString());
