@@ -12,3 +12,19 @@ code {
 pre {
     margin: 0;
 }
+
+div {
+    .marquee-container:not(.horizontal) {
+        &::before {
+            background: unset;
+        }
+    
+        &::after {
+            background: unset;
+        }
+    
+        .marquee {
+            width: 100%;
+        }
+    }
+}
