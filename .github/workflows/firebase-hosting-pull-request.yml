@@ -20,6 +20,7 @@ jobs:
               with:
                   repoToken: "${{ secrets.GITHUB_TOKEN }}"
                   firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MAKE_ME_CODE }}"
+                  channelId: live
                   projectId: make-me-code
               env:
                   FIREBASE_CLI_PREVIEWS: hostingchannels
