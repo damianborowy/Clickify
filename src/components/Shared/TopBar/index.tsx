@@ -1,5 +1,5 @@
 const TopBar = () => {
-    return <div></div>;
+    return <div>TopBar</div>;
 };
 
 export default TopBar;

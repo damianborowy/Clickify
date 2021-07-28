@@ -32,7 +32,6 @@ const CodeMarquee = ({ languages }: CodeMarqueeProps) => {
             key={codeChunk.code}
             language={codeChunk.language}
             style={docco}
-            wrapLines
           >
             {codeChunk.code}
           </SyntaxHighlighter>

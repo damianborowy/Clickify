@@ -32,76 +32,77 @@ const code2 = `<!DOCTYPE html>
 
 </html>`;
 
-const code3 = `<section>
-<h2 class="portfolio_header">Portfolio</h2>
-<div class="portfolio">
-    <div class="quick-notes">
-        <div class="overlay">
-            <h2>Quick Notes</h2>
-            <div class="overlay_buttons_group">
-                <a class="overlay_button" href="https://quick-notes.surge.sh/">
-                    Demo
+const code3 = `<!DOCTYPE html>
+<section>
+    <h2 class="portfolio_header">Portfolio</h2>
+    <div class="portfolio">
+        <div class="quick-notes">
+            <div class="overlay">
+                <h2>Quick Notes</h2>
+                <div class="overlay_buttons_group">
+                    <a class="overlay_button" href="https://quick-notes.surge.sh/">
+                        Demo
+                    </a>
+                    <a class="overlay_button" href="https://github.com/GustawTanski/quick-notes">
+                        More
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="supreme-potato">
+            <div class="overlay">
+                <h2>Supreme Potato</h2>
+                <div class="overlay_buttons_group">
+                    <a class="overlay_button" href="https://supreme-potato.surge.sh">
+                        Demo
+                    </a>
+                    <a class="overlay_button" href="https://github.com/GustawTanski/supreme-potato">
+                        More
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="automatic-octo-spoon">
+            <div class="overlay">
+                <h2>Automatic Octo Spoon</h2>
+                <a class="overlay_button" href="https://github.com/GustawTanski/automatic-octo-spoon">
+                    More
                 </a>
-                <a class="overlay_button" href="https://github.com/GustawTanski/quick-notes">
+            </div>
+        </div>
+        <div class="weatherbunny">
+            <div class="overlay">
+                <h2>Weatherbunny</h2>
+                <a class="overlay_button" href="https://github.com/jtmcoderscamp/weatherbunny">
+                    More
+                </a>
+            </div>
+        </div>
+        <div class="chess">
+            <div class="overlay">
+                <h2>Chess</h2>
+                <a class="overlay_button" href="https://github.com/GustawTanski/ChessCodersCamp">
+                    More
+                </a>
+            </div>
+        </div>
+        <div class="codewars">
+            <div class="overlay">
+                <h2>Codewars</h2>
+                <a class="overlay_button" href="https://github.com/damianborowy/Codewars">
+                    More
+                </a>
+            </div>
+        </div>
+        <div class="dignclick">
+            <div class="overlay">
+                <h2>Dig 'n Click</h2>
+                <a class="overlay_button" href="https://github.com/damianborowy/Dig-n-Click">
                     More
                 </a>
             </div>
         </div>
     </div>
-    <div class="supreme-potato">
-        <div class="overlay">
-            <h2>Supreme Potato</h2>
-            <div class="overlay_buttons_group">
-                <a class="overlay_button" href="https://supreme-potato.surge.sh">
-                    Demo
-                </a>
-                <a class="overlay_button" href="https://github.com/GustawTanski/supreme-potato">
-                    More
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="automatic-octo-spoon">
-        <div class="overlay">
-            <h2>Automatic Octo Spoon</h2>
-            <a class="overlay_button" href="https://github.com/GustawTanski/automatic-octo-spoon">
-                More
-            </a>
-        </div>
-    </div>
-    <div class="weatherbunny">
-        <div class="overlay">
-            <h2>Weatherbunny</h2>
-            <a class="overlay_button" href="https://github.com/jtmcoderscamp/weatherbunny">
-                More
-            </a>
-        </div>
-    </div>
-    <div class="chess">
-        <div class="overlay">
-            <h2>Chess</h2>
-            <a class="overlay_button" href="https://github.com/GustawTanski/ChessCodersCamp">
-                More
-            </a>
-        </div>
-    </div>
-    <div class="codewars">
-        <div class="overlay">
-            <h2>Codewars</h2>
-            <a class="overlay_button" href="https://github.com/damianborowy/Codewars">
-                More
-            </a>
-        </div>
-    </div>
-    <div class="dignclick">
-        <div class="overlay">
-            <h2>Dig 'n Click</h2>
-            <a class="overlay_button" href="https://github.com/damianborowy/Dig-n-Click">
-                More
-            </a>
-        </div>
-    </div>
-</div>
 </section>`;
 
 const htmlCode = [code1, code2, code3];

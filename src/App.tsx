@@ -1,7 +1,16 @@
+import { useRecoilValue } from "recoil";
+import useInterval from "./hooks/useInterval";
 import HomePage from "./pages/HomePage";
+import { delayAtom } from "./store/engine";
 
-function App() {
-    return <HomePage />;
-}
+const App = () => {
+  const delay = useRecoilValue(delayAtom);
+
+  useInterval(() => {
+    console.log("foo");
+  }, delay);
+
+  return <HomePage />;
+};
 
 export default App;
