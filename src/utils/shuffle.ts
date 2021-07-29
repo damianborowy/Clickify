@@ -1,10 +1,10 @@
 /**
  * Source: https://stackoverflow.com/a/2450976
- * 
- * @param array 
- * @returns 
+ *
+ * @param array
+ * @returns shuffled array
  */
-export default function shuffle(array: any[]) {
+export default function shuffle<T>(array: T[]): T[] {
   var currentIndex = array.length,
     randomIndex;
 
@@ -12,10 +12,7 @@ export default function shuffle(array: any[]) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
   }
 
   return array;

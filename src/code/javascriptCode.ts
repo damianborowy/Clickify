@@ -39,7 +39,7 @@ const code5 = `function getRandomString(length) {
   }
 
   return result;
-}`
+}`;
 
 const javascriptCode = [code1, code2, code3, code4, code5];
 

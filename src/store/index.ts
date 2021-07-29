@@ -1,5 +1,5 @@
-import { recoilPersist } from "recoil-persist";
+import { recoilPersist } from 'recoil-persist';
 
 export const { persistAtom } = recoilPersist({
-  key: "@game-state",
+  key: '@game-state',
 });
