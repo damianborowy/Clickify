@@ -1,5 +1,5 @@
 enum Realm {
-  FRONTEND = 0,
+  FRONTEND = 'Frontend',
 }
 
 export default Realm;

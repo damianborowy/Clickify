@@ -1,7 +1,7 @@
 import { defaultHtmlUpgradeDetails, htmlUpgrades } from '../../constants/frontend/htmlDefaults';
-import createUpgradeAtom from '../upgradeSelectorGenerator';
+import createUpgradeSelector from '../generators/upgradeSelectorGenerator';
 
-export const htmlUpgradesSelector = createUpgradeAtom({
+export const htmlUpgradesSelector = createUpgradeSelector({
   language: 'html',
   defaultUpgradeDetails: defaultHtmlUpgradeDetails,
   upgrades: htmlUpgrades,

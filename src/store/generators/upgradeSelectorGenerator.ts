@@ -1,15 +1,15 @@
 import { atom, selector } from 'recoil';
-import { persistAtom } from '.';
-import Upgrade from '../types/Upgrade';
-import UpgradeDetails from '../types/UpgradeDetails';
+import { persistAtom } from '..';
+import Upgrade from '../../types/Upgrade';
+import UpgradeDetails from '../../types/UpgradeDetails';
 
-type CreateUpgradeAtom = {
+type CreateUpgradeSelectorArgs = {
   language: string;
   defaultUpgradeDetails: UpgradeDetails[];
   upgrades: Upgrade[];
 };
 
-const createUpgradeAtom = ({ language, defaultUpgradeDetails, upgrades }: CreateUpgradeAtom) => {
+const createUpgradeSelector = ({ language, defaultUpgradeDetails, upgrades }: CreateUpgradeSelectorArgs) => {
   const newUpgradeAtom = atom<UpgradeDetails[]>({
     key: `${language}UpgradeDetailsAtom`,
     default: defaultUpgradeDetails,
@@ -38,4 +38,4 @@ const createUpgradeAtom = ({ language, defaultUpgradeDetails, upgrades }: Create
   });
 };
 
-export default createUpgradeAtom;
+export default createUpgradeSelector;

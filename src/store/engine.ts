@@ -1,5 +1,6 @@
 import { atom, selector } from 'recoil';
 import { persistAtom } from '.';
+import { availableLanguages } from '../constants/languageFiles';
 import BuyMultiplier from '../types/BuyMultiplier';
 import Realm from '../types/Realm';
 
@@ -19,12 +20,7 @@ export const selectedRealmAtom = atom<Realm>({
   default: Realm.FRONTEND,
 });
 
-export const selectedLanguageSelector = selector<string>({
+export const selectedLanguageAtom = atom<string>({
   key: 'selectedLanguage',
-  get: ({ get }) => {
-    return '';
-  },
-  set: ({ set }, newLanguage) => {
-    set(selectedLanguageSelector, newLanguage);
-  },
+  default: availableLanguages[Realm.FRONTEND][0]
 });
