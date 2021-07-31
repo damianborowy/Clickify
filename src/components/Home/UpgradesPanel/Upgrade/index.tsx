@@ -1,7 +1,13 @@
+import Upgrade from '../../../../types/Upgrade';
+import UpgradeDetails from '../../../../types/UpgradeDetails';
 import styles from './style.module.scss';
 
-const Upgrade = () => {
-  return <div></div>;
+type UpgradeProps = {
+  upgrade: Upgrade & UpgradeDetails;
 };
 
-export default Upgrade;
+const UpgradeComponent = ({ upgrade }: UpgradeProps) => {
+  return <div>{upgrade.name}</div>;
+};
+
+export default UpgradeComponent;

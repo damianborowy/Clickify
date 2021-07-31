@@ -1,11 +1,16 @@
 import { Button } from '@material-ui/core';
-import { useRecoilState } from 'recoil';
-import { buyMultiplierAtom } from '../../../store/engine';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { buyMultiplierAtom, selectedLanguageAtom, selectedRealmAtom } from '../../../store/engine';
+import { allUpgradesSelector } from '../../../store/upgrades';
 import BuyMultiplier from '../../../types/BuyMultiplier';
 import styles from './style.module.scss';
+import UpgradeComponent from './Upgrade';
 
 const UpgradesPanel = () => {
   const [buyMultiplier, setBuyMultiplier] = useRecoilState(buyMultiplierAtom);
+  const selectedRealm = useRecoilValue(selectedRealmAtom);
+  const selectedLanguage = useRecoilValue(selectedLanguageAtom);
+  const allUpgrades = useRecoilValue(allUpgradesSelector);
 
   const handleMultiplierChanged = () => {
     const enumValues = Object.values(BuyMultiplier);
@@ -21,7 +26,11 @@ const UpgradesPanel = () => {
       <div>
         <Button onClick={handleMultiplierChanged}>{buyMultiplier}</Button>
       </div>
-      <div></div>
+      <div>
+        {allUpgrades[selectedRealm][selectedLanguage].map((upgrade) => (
+          <UpgradeComponent key={upgrade.name} upgrade={upgrade} />
+        ))}
+      </div>
     </div>
   );
 };

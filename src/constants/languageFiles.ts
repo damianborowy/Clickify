@@ -11,13 +11,13 @@ const frontendLanguages: { [key: string]: string[] } = {
   typescript: typescriptCode,
 };
 
-const languageFiles = {
+const languageFilesByRealm = {
   [Realm.FRONTEND]: frontendLanguages,
 };
 
-export const availableLanguages = Object.entries(languageFiles).reduce(
-  (acc, [key, value]) => ({ ...acc, [key]: Object.keys(value) }),
+export const availableLanguages = Object.entries(languageFilesByRealm).reduce(
+  (acc, [realm, languageFiles]) => ({ ...acc, [realm]: Object.keys(languageFiles) }),
   {} as { [x: string]: string[] }
 );
 
-export default languageFiles;
+export default languageFilesByRealm;

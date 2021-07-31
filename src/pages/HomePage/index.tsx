@@ -1,3 +1,4 @@
+import LanguagePicker from '../../components/Home/LanguagePicker';
 import UpgradesPanel from '../../components/Home/UpgradesPanel';
 import BottomMenu from '../../components/Shared/BottomMenu';
 import CodeMarquee from '../../components/Shared/CodeMarquee';
@@ -9,6 +10,7 @@ const HomePage = () => {
     <div className={styles.container}>
       <TopBar />
       <CodeMarquee />
+      <LanguagePicker />
       <UpgradesPanel />
       <BottomMenu />
     </div>

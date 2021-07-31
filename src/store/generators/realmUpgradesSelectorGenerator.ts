@@ -16,12 +16,11 @@ const createRealmUpgradesSelector = ({ languageSelectors, realm }: CreateRealmUp
     get: ({ get }) => {
       const selectedRealm = get(selectedRealmAtom);
 
-      return languageSelectors
-        .map(get)
-        .map((upgrades, index) => ({
-          language: availableLanguages[selectedRealm][index],
-          upgrades,
-        }));
+      return languageSelectors.map(get).reduce((acc, upgrades, index) => {
+        acc[availableLanguages[selectedRealm][index]] = upgrades;
+
+        return acc;
+      }, {} as { [x: string]: (Upgrade & UpgradeDetails)[] });
     },
   });
 };
