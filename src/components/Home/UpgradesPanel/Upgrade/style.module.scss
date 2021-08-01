@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    align-items: center;
+    .upgradeIcon {
+        width: 48px;
+        height: 48px;
+    }
+    .upgradeInfoContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}

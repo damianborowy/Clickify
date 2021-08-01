@@ -22,7 +22,7 @@ const UpgradesPanel = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <Button onClick={handleMultiplierChanged}>{buyMultiplier}</Button>
       </div>
