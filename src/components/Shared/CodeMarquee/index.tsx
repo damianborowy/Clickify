@@ -4,7 +4,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Marquee from 'react-marquee-master';
 import { useMemo } from 'react';
 import shuffle from '../../../utils/shuffle';
-import languageFilesByRealm from '../../../constants/languageFiles';
+import languageFilesByRealm from '../../../constants/languages/languageFiles';
 import styles from './style.module.scss';
 import { useRecoilValue } from 'recoil';
 import { delayAtom, selectedRealmAtom } from '../../../store/engine';

@@ -1,4 +1,4 @@
-import { defaultHtmlUpgradeDetails, htmlUpgrades } from '../../../constants/frontend/htmlDefaults';
+import { defaultHtmlUpgradeDetails, htmlUpgrades } from '../../../constants/languages/frontend/htmlDefaults';
 import createUpgradeSelector from '../../generators/upgradeSelectorGenerator';
 
 export const htmlUpgradesSelector = createUpgradeSelector({

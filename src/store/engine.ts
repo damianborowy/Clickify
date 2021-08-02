@@ -1,6 +1,6 @@
 import { atom, selector } from 'recoil';
 import { persistAtom } from '.';
-import { availableLanguages } from '../constants/languageFiles';
+import { availableLanguages } from '../constants/languages/languageFiles';
 import BuyMultiplier from '../types/BuyMultiplier';
 import Realm from '../types/Realm';
 

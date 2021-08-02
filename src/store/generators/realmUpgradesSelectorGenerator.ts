@@ -1,5 +1,5 @@
 import { RecoilState, selector } from 'recoil';
-import { availableLanguages } from '../../constants/languageFiles';
+import { availableLanguages } from '../../constants/languages/languageFiles';
 import Realm from '../../types/Realm';
 import Upgrade from '../../types/Upgrade';
 import UpgradeDetails from '../../types/UpgradeDetails';

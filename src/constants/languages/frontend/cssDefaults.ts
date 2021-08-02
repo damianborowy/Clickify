@@ -1,6 +1,6 @@
-import UpgradeDetails from '../../types/UpgradeDetails';
+import UpgradeDetails from '../../../types/UpgradeDetails';
 import { ReactComponent as Foo } from '../../assets/icons/foo.svg';
-import Upgrade from '../../types/Upgrade';
+import Upgrade from '../../../types/Upgrade';
 
 export const cssUpgrades: Upgrade[] = [
   {

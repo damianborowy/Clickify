@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { availableLanguages } from '../../../constants/languageFiles';
+import { availableLanguages } from '../../../constants/languages/languageFiles';
 import { selectedLanguageAtom, selectedRealmAtom } from '../../../store/engine';
 import styles from './style.module.scss';
 
