@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import useInterval from './hooks/useInterval';
 import HomePage from './pages/HomePage';
@@ -10,7 +10,8 @@ const App = () => {
   const delay = useRecoilValue(delayAtom);
   const [allUpgrades, setAllUpgrades] = useRecoilState(allUpgradesSelector);
   const [allRealmsEconomies, setAllRealmsEconomies] = useRecoilState(allRealmsEconomiesSelector);
-  const [foo, setFoo] = useState('');
+  const [foo, setFoo] = useState({ min: Number.MAX_VALUE, max: Number.MIN_VALUE, avg: 0 });
+  const times = useRef<number[]>([]);
 
   useInterval(() => {
     const t0 = performance.now();
@@ -29,12 +30,21 @@ const App = () => {
     setAllUpgrades(newUpgrades);
     setAllRealmsEconomies(newRealmsEconomies);
 
-    setFoo(`${performance.now() - t0}ms`);
+    const t1 = performance.now() - t0;
+
+    times.current = [...times.current, t1];
+    setFoo({
+      min: Math.min(foo.min, t1),
+      max: Math.max(foo.max, t1),
+      avg: times.current.reduce((acc, val) => acc + val, 0) / times.current.length,
+    });
   }, delay);
 
   return (
     <div>
-      {foo} ms
+      Min: {foo.min} ms <br />
+      Max: {foo.max} ms <br />
+      Avg: {foo.avg} ms <br />
       <HomePage />
     </div>
   );
