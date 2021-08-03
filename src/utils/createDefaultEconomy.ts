@@ -1,4 +1,5 @@
-import { availableLanguages } from "../constants/languages/languageFiles";
+import { availableLanguages } from '../constants/languages/languageFiles';
+import LanguageEconomy from '../types/LanguageEconomy';
 import Realm from '../types/Realm';
 
 const createDefaultEconomy = (realm: Realm) =>
@@ -6,6 +7,6 @@ const createDefaultEconomy = (realm: Realm) =>
     acc[language] = 0;
 
     return acc;
-  }, {} as { [x: string]: number });
+  }, {} as LanguageEconomy);
 
 export default createDefaultEconomy;

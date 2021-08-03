@@ -3,6 +3,8 @@ import createRealmUpgradesSelector from '../../generators/realmUpgradesSelectorG
 import { htmlUpgradesSelector } from './html';
 
 export const frontendUpgradesSelector = createRealmUpgradesSelector({
-  languageSelectors: [htmlUpgradesSelector],
+  languageSelectors: {
+    html: htmlUpgradesSelector,
+  },
   realm: Realm.FRONTEND,
 });
